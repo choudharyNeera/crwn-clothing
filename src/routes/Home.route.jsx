@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Directory from '../components/directory/Directory';
 import Shop from "../components/shop/Shop";
 import TopNavigation from "./topNavigation/TopNavigation";
+import SignIn from "./signIn/SignIn";
 
 const HomeRoute = () => {
   const categories = [
@@ -37,6 +38,8 @@ const HomeRoute = () => {
       <Route path='/' element={<TopNavigation />}>
         <Route index element={<Directory categories={categories}/>} />
         <Route path="shop" element={<Shop />} />
+        <Route path="signIn" element={<SignIn />} />
+        {/* <Route path="shop" element={<Shop />} /> */}
       </Route>
     </Routes>
   )
